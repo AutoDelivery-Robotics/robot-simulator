@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  robot-simulator:
+    build:
+      context: ../../
+      dockerfile: backend/robot-simulator/Dockerfile
+    networks:
+      - saga_network
+networks:
+  saga_network:
+    external: true
